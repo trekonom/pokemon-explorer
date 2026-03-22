@@ -9,7 +9,9 @@ export default function PokemonCard({ pokemon }) {
 
   return (
     <div className="pokemon-card">
-      <img src={spriteUrl} alt={name} className="pokemon-image" />
+      <div className="pokemon-image-circle">
+        <img src={spriteUrl} alt={name} className="pokemon-image" />
+      </div>
       <h2>{name}</h2>
       <p>Type: {type}</p>
       <p>HP: {hp}</p>
