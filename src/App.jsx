@@ -3,7 +3,6 @@ import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import ZoomedCard from "./components/ZoomedCard";
 import FilterButton from "./components/FilterButton";
-import pokemonLogo from "./assets/International_Pokémon_logo.svg";
 
 function App(props) {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -41,6 +40,9 @@ function App(props) {
 
   // Von Benutzer:Filb - selbst erstellt, nachgezeichnet nach Vorlage in einer Bedienungsanleitung von Pokémon., PD-Schöpfungshöhe, https://de.wikipedia.org/w/index.php?curid=658479
   // Von Nintendo - Übertragen aus en.wikipedia nach Commons. Based on DVD boxart., Gemeinfrei, https://commons.wikimedia.org/w/index.php?curid=16063375
+
+  const pokemonLogo =
+    "https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg";
 
   return (
     <>
