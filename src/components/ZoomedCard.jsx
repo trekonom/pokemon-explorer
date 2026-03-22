@@ -3,23 +3,15 @@ import PokemonCardStats from "./PokemonCardStats";
 
 export default function ZoomedCard({ pokemon, onClose }) {
   return (
-    <div
-      onClick={onClose}
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0,0,0,0.5)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
+    <div onClick={onClose} className="pokemon-card-zoomed-overlay">
       <div onClick={(e) => e.stopPropagation()} className="pokemon-card-zoomed">
         <PokemonCardStats
           pokemon={pokemon}
           classImage="pokemon-image-circle-zoomed"
         />
-        <button onClick={onClose}>Close</button>
+        <button onClick={onClose} className="pokemon-card-button-zoomed">
+          Close
+        </button>
       </div>
     </div>
   );

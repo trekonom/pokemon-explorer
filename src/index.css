@@ -13,8 +13,7 @@
   --pokemon-darkblue: #2e2473;
   --pokemon-dark: #0d0d0d;
   --pokemon-white: #ffffff;
-  --pokemon-darkyellow-50: #bf920a80;
-  --pokemon-yellow-50: #ffca0280;
+  --pokemon-green: #2e8b57;
 
   color-scheme: light;
   color: var(--pokemon-dark);

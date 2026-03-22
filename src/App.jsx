@@ -47,8 +47,8 @@ function App(props) {
 
   return (
     <>
-      <div class="header">
-        <div class="spacer"></div>
+      <div className="header">
+        <div className="spacer"></div>
         <img src={pokemonLogo} alt="Pokemon Logo" className="pokemon-logo" />
         <Socials />
       </div>

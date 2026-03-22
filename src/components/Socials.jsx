@@ -1,6 +1,6 @@
 export default function Socials() {
   return (
-    <div class="socials">
+    <div className="socials">
       <a
         href="https://github.com/trekonom/pokemon-explorer"
         target="_blank"
@@ -8,7 +8,7 @@ export default function Socials() {
         className="social"
         title="GitHub"
       >
-        <i class="fab fa-github"></i>
+        <i className="fab fa-github"></i>
       </a>
     </div>
   );
