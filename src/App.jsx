@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import PokemonCard from "./PokemonCard";
+import PokemonCard from "./components/PokemonCard";
 
 function App(props) {
   // Sprite image URL pattern:

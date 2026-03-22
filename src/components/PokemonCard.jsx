@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css"; // reuse existing stylesheet for simplicity
+import "../App.css"; // reuse existing stylesheet for simplicity
 
 export default function PokemonCard({ pokemon }) {
   const { id, name, type, hp, attack } = pokemon;
