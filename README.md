@@ -1,16 +1,49 @@
-# React + Vite
+# Pokemon Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React app to browse and filter Pokemon cards with a retro Pokemon aesthetic.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse a grid of 20 Pokemon cards with sprites, type, HP, and Attack stats
+- Filter cards by type (Grass, Fire, Water, Electric, and more)
+- Click any card to open a zoomed modal with full details
+- Retro Pokemon brand styling with drop-shadow effects and hover animations
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- Pokemon sprites from [PokeAPI](https://pokeapi.co/)
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Opens at `http://localhost:3000`.
+
+## Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## Project Structure
+
+```
+src/
+├── main.jsx              # Entry point + Pokemon data
+├── App.jsx               # Root component (filter + zoom state)
+├── App.css               # All app styles
+├── components/
+│   ├── PokemonCard.jsx   # Clickable card wrapper
+│   ├── PokemonCardStats.jsx  # Card content (shared with zoom view)
+│   ├── ZoomedCard.jsx    # Full-screen modal overlay
+│   └── FilterButton.jsx  # Type filter toggle button
+└── assets/               # Logo SVG
+```
