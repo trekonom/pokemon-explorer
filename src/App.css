@@ -5,7 +5,15 @@
   text-align: center;
 }
 
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: start; /* top-align all items */
+  width: 100%;
+}
+
 .pokemon-logo {
+  justify-self: center;
   height: 200px;
   margin: 1rem 0 0.5rem 0;
   filter: drop-shadow(2px 2px 4px rgba(44, 44, 44, 0.2));
@@ -107,4 +115,27 @@
 .read-the-docs {
   color: var(--pokemon-red);
   font-weight: 700;
+}
+
+/* Top navigation */
+.socials {
+  justify-self: right;
+  white-space: nowrap;
+  align-self: start; /* top */
+  text-align: right;
+}
+
+.social {
+  color: var(--pokemon-blue);
+  font-size: 35px;
+  transition: all 0.3s ease;
+  align-items: center;
+  text-align: center;
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.social:hover {
+  color: var(--pokemon-darkred);
+  transform: translateY(-2px) scale(1.1);
 }

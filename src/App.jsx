@@ -3,6 +3,7 @@ import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import ZoomedCard from "./components/ZoomedCard";
 import FilterButton from "./components/FilterButton";
+import Socials from "./components/Socials";
 
 function App(props) {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -46,7 +47,11 @@ function App(props) {
 
   return (
     <>
-      <img src={pokemonLogo} alt="Pokemon Logo" className="pokemon-logo" />
+      <div class="header">
+        <div class="spacer"></div>
+        <img src={pokemonLogo} alt="Pokemon Logo" className="pokemon-logo" />
+        <Socials />
+      </div>
       <h1>Explorer</h1>
 
       <div className="filters">{filterList}</div>
