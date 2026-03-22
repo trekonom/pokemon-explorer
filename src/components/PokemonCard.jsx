@@ -3,6 +3,8 @@ import "../App.css"; // reuse existing stylesheet for simplicity
 
 export default function PokemonCard({ pokemon }) {
   const { id, name, type, hp, attack } = pokemon;
+  // Sprite image URL pattern:
+  // `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
   const spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
   return (
