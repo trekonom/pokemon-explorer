@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import PokemonCard from "./components/PokemonCard";
 import FilterButton from "./components/FilterButton";
+import pokemonLogo from "./assets/International_Pokémon_logo.svg";
 
 function App(props) {
   const types = [...new Set(props.pokemons.map((pokemon) => pokemon.type))];
@@ -33,9 +34,13 @@ function App(props) {
     .filter(FILTER_MAP[filter])
     .map((p) => <PokemonCard key={p.id} pokemon={p} />);
 
+  // Von Benutzer:Filb - selbst erstellt, nachgezeichnet nach Vorlage in einer Bedienungsanleitung von Pokémon., PD-Schöpfungshöhe, https://de.wikipedia.org/w/index.php?curid=658479
+  // Von Nintendo - Übertragen aus en.wikipedia nach Commons. Based on DVD boxart., Gemeinfrei, https://commons.wikimedia.org/w/index.php?curid=16063375
+
   return (
     <>
-      <h1>Pokemon Explorer</h1>
+      <img src={pokemonLogo} alt="Pokemon Logo" className="pokemon-logo" />
+      <h1>Explorer</h1>
 
       <div className="filters">{filterList}</div>
 
