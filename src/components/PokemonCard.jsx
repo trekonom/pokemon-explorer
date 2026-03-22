@@ -1,21 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css"; // reuse existing stylesheet for simplicity
+import PokemonCardStats from "./PokemonCardStats";
 
-export default function PokemonCard({ pokemon }) {
+export default function PokemonCard({ pokemon, onClick }) {
   const { id, name, type, hp, attack } = pokemon;
   // Sprite image URL pattern:
   // `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
   const spriteUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
 
   return (
-    <div className="pokemon-card">
-      <div className="pokemon-image-circle">
-        <img src={spriteUrl} alt={name} className="pokemon-image" />
+    <>
+      <div
+        className="pokemon-card"
+        onClick={() => onClick(pokemon)}
+        title="Click me to zoom"
+      >
+        <PokemonCardStats pokemon={pokemon} />
       </div>
-      <h2>{name}</h2>
-      <p>Type: {type}</p>
-      <p>HP: {hp}</p>
-      <p>Attack: {attack}</p>
-    </div>
+    </>
   );
 }

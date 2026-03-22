@@ -38,7 +38,8 @@
   margin-top: 2rem;
 }
 
-.pokemon-card {
+.pokemon-card,
+.pokemon-card-zoomed {
   border: 4px solid var(--pokemon-blue);
   border-radius: 16px;
   padding: 1.5rem;
@@ -48,6 +49,15 @@
   transition: all 0.25s ease;
   cursor: pointer;
   color: var(--pokemon-blue);
+}
+
+.pokemon-card-zoomed {
+  box-shadow: 8px 8px 0px var(--pokemon-darkyellow);
+  border-color: var(--pokemon-darkred);
+  background: var(--pokemon-blue);
+  color: var(--pokemon-white);
+  width: 320px;
+  height: 520px;
 }
 
 .pokemon-card:hover {
@@ -68,7 +78,8 @@
   margin: 0.5rem 0;
 }
 
-.pokemon-image-circle {
+.pokemon-image-circle,
+.pokemon-image-circle-zoomed {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -79,6 +90,11 @@
   margin: 0 auto 1rem;
   background: #f4f4f4;
   border: 3px solid var(--pokemon-darkred); /* border color */
+}
+
+.pokemon-image-circle-zoomed {
+  width: 240px;
+  height: 240px;
 }
 
 .pokemon-image {
